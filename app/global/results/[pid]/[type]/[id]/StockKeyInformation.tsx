@@ -48,19 +48,14 @@ export default async function StockKeyInformation({ car }: Props) {
                 <td className="first !text-[9px] sm:!text-[12px]">
                   Engine Number
                 </td>
-                {car.engineNumber !== "" ? (
-                  <td className="!text-[9px] sm:!text-[12px]">
-                    {" "}
-                    {car.engineNumber}
-                  </td>
-                ) : (
-                  <td className="!text-[9px] sm:!text-[12px]">Not Available</td>
-                )}
+                <td className="!text-[9px] sm:!text-[12px]">
+                  {car.engineNumber ?? "Not Available"}
+                </td>
               </tr>
               <tr>
                 <td className="first !text-[9px] sm:!text-[12px]">Body Type</td>
                 <td className="!text-[9px] sm:!text-[12px]">
-                  {car.typeOfBody}
+                  {car.typeOfBody ?? "Not Available"}
                 </td>
               </tr>
               <tr>
@@ -68,7 +63,7 @@ export default async function StockKeyInformation({ car }: Props) {
                   Body Length
                 </td>
                 <td className="!text-[9px] sm:!text-[12px]">
-                  {car.lengthOfCar}
+                  {car.lengthOfCar ?? "Not Available"}
                 </td>
               </tr>
               <tr>
@@ -80,7 +75,7 @@ export default async function StockKeyInformation({ car }: Props) {
                   Drivetrain
                 </td>
                 <td className="!text-[9px] sm:!text-[12px]">
-                  {car.drivetrainType}
+                  {car.drivetrainType ?? "Not Available"}
                 </td>
               </tr>
             </tbody>
@@ -105,7 +100,7 @@ export default async function StockKeyInformation({ car }: Props) {
                   Steering Type
                 </td>
                 <td className="!text-[9px] sm:!text-[12px]">
-                  {car.typeOfSteering}
+                  {car.typeOfSteering ?? "Not Available"}
                 </td>
               </tr>
               <tr>
@@ -118,13 +113,17 @@ export default async function StockKeyInformation({ car }: Props) {
                 <td className="first !text-[9px] sm:!text-[12px]">
                   Number of Doors
                 </td>
-                <td className="!text-[9px] sm:!text-[12px]">{car.noOfDoors}</td>
+                <td className="!text-[9px] sm:!text-[12px]">
+                  {car.noOfDoors ?? "Not Available"}
+                </td>
               </tr>
               <tr>
                 <td className="first !text-[9px] sm:!text-[12px]">
                   Number of Seats
                 </td>
-                <td className="!text-[9px] sm:!text-[12px]">{car.noOfSeats}</td>
+                <td className="!text-[9px] sm:!text-[12px]">
+                  {car.noOfSeats ?? "Not Available"}
+                </td>
               </tr>
               <tr>
                 <td className="first !text-[9px] sm:!text-[12px]">Colour</td>
