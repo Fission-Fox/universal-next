@@ -3,9 +3,10 @@ import { StockCars } from "@/models/StockCars";
 
 interface Props {
   car: StockCars;
+  vehicleType: string;
 }
-export default async function StockKeyInformation({ car }: Props) {
-  const stockOptions = await agent.LoadData.caroptionMappingList(car.stockId);
+export default async function StockKeyInformation({ car, vehicleType }: Props) {
+  const stockOptions = await agent.LoadData.caroptionMappingList(car.stockId, vehicleType);
   const optionsMaster = await agent.LoadData.caroptionsList(); //db.tblCarOptions.findMany({where: {isActive:true}});
 
   return (

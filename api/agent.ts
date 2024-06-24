@@ -140,8 +140,8 @@ const LoadData = {
   truck: (stockID: number) => request.get<Trucks>(`trucks/${stockID}`),
   machinery: (stockID: number) => request.get<Trucks>(`machinery/${stockID}`),
 
-  stockSliderList: (stockID: number) =>
-    request.get<StockPictures[]>(`carstock/imagestock/${stockID}`),
+  stockSliderList: (stockID: number, vehicleType: string) =>
+    request.get<StockPictures[]>(`carstock/imagestock/${stockID}/${VehicleTypeToID(vehicleType)}`),
 
   //------ Master Data
   countryList: () => request.get<Country[]>("masterdata/country"),
@@ -169,8 +169,8 @@ const LoadData = {
   caroptionsList: () => request.get<CarOptions[]>("masterdata/caroptions"),
 
   // Required Parameter
-  caroptionMappingList: (stockID: number) =>
-    request.get<CarOptionsMapping[]>(`carstock/caroptions/${stockID}`),
+  caroptionMappingList: (stockID: number, vehicleType: string) =>
+    request.get<CarOptionsMapping[]>(`carstock/caroptions/${stockID}/${VehicleTypeToID(vehicleType)}`),
 
   //------ Computational
   inspectioncost: () =>
@@ -290,6 +290,20 @@ async function getData() {
   }
 
   return res.json();
+}
+
+function VehicleTypeToID(vehicleType: string): number {
+  if (vehicleType == "Trucks" || vehicleType == "trucks") {
+    console.log(vehicleType)
+        return 2;
+  }
+  else if (vehicleType == "Machinery" || vehicleType == "machinery") {
+    console.log(vehicleType)
+    return 3;
+  }else {
+    return 1;
+  }
+
 }
 
 async function registerUser(user: CustomerSignUp) {

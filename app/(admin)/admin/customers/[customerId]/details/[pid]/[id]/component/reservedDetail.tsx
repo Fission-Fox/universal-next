@@ -89,6 +89,7 @@ export default async function AdminReservedDetail({ params }: Props) {
                           <CarDetailedSlideshow
                             mainPic={Stock.data.imageUrl}
                             stockID={Stock.data.stockId}
+                            vehicleType={"params"}
                             isReserved={false}
                             isPurchased={false}
                           />
@@ -104,7 +105,7 @@ export default async function AdminReservedDetail({ params }: Props) {
                     </div>
                   </div>
                   <div className="col-md-6 ">
-                    <StockKeyInformation car={Stock.data} />
+                    <StockKeyInformation car={Stock.data} vehicleType={""} />
                     <DescriptionUI description={Stock.data.description} />
                     {/* <Cards stockID={Stock.data.stockId} /> */}
                   </div>

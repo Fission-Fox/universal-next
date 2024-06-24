@@ -6,6 +6,7 @@ import ShareDownloadComponent from "./ShareDownloadComponent";
 
 interface Props {
   stockID: number;
+  vehicleType: string;
   mainPic: string;
   isReserved: Boolean;
   isPurchased: Boolean;
@@ -13,11 +14,13 @@ interface Props {
 
 export default async function CarDetailedSlideshow({
   stockID,
+  vehicleType,
   mainPic,
   isReserved,
   isPurchased,
 }: Props) {
-  const stockPicture = await agent.LoadData.stockSliderList(stockID);
+  console.log(stockID, vehicleType);
+  const stockPicture = await agent.LoadData.stockSliderList(stockID,vehicleType);
   const images = stockPicture.data?.map((pic: any) => ({
     src: pic.imageURL,
   }));

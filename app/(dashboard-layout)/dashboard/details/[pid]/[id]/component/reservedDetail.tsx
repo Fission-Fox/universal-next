@@ -68,6 +68,7 @@ export default async function ReservedDetail({ params }: Props) {
                       <div id="wrap" className="container-fluid">
                         <div className="row">
                           <CarDetailedSlideshow
+                            vehicleType={""}
                             isPurchased={false}
                             mainPic={Stock.data.imageUrl}
                             stockID={Stock.data.stockId}
@@ -85,7 +86,7 @@ export default async function ReservedDetail({ params }: Props) {
                     </div>
                   </div>
                   <div className="col-md-6 ">
-                    <StockKeyInformation car={Stock.data} />
+                    <StockKeyInformation car={Stock.data} vehicleType={""} />
                     <DescriptionUI description={Stock.data.description} />
                     {/* <Cards stockID={Stock.data.stockId} /> */}
                   </div>

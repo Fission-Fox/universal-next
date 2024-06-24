@@ -2,10 +2,11 @@ import agent from "@/api/agent";
 import { CarOptions } from "@/models/Master/CarOptions";
 interface Props {
   stockID: number;
+  vehicleType: string;
   optionsMaster: CarOptions[];
 }
-export default async function CarOptionList({ stockID, optionsMaster }: Props) {
-  const stockOptions = await agent.LoadData.caroptionMappingList(stockID);
+export default async function CarOptionList({ stockID, vehicleType, optionsMaster }: Props) {
+  const stockOptions = await agent.LoadData.caroptionMappingList(stockID, vehicleType);
 
   return (
     <>
