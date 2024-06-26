@@ -6,7 +6,10 @@ interface Props {
   vehicleType: string;
 }
 export default async function StockKeyInformation({ car, vehicleType }: Props) {
-  const stockOptions = await agent.LoadData.caroptionMappingList(car.stockId, vehicleType);
+  const stockOptions = await agent.LoadData.caroptionMappingList(
+    car.stockId,
+    vehicleType
+  );
   const optionsMaster = await agent.LoadData.caroptionsList(); //db.tblCarOptions.findMany({where: {isActive:true}});
 
   return (
@@ -71,14 +74,16 @@ export default async function StockKeyInformation({ car, vehicleType }: Props) {
                 <td className="first !text-[9px] sm:!text-[12px]">Dimension</td>
                 <td className="!text-[9px] sm:!text-[12px]">{car.m3}</td>
               </tr>
-              <tr>
-                <td className="first !text-[9px] sm:!text-[12px]">
-                  Drivetrain
-                </td>
-                <td className="!text-[9px] sm:!text-[12px]">
-                  {car.drivetrainType ?? "Not Available"}
-                </td>
-              </tr>
+              {vehicleType === "cars" && (
+                <tr>
+                  <td className="first !text-[9px] sm:!text-[12px]">
+                    Drivetrain
+                  </td>
+                  <td className="!text-[9px] sm:!text-[12px]">
+                    {car.drivetrainType ?? "Not Available"}
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
           <table className="keyinfo">
