@@ -63,7 +63,7 @@ export default async function CarDetailed({ params }: Props) {
   );
   const freightChargeMaster = await agent.LoadData.freightcost();
   const inspectionCost = await agent.LoadData.inspectioncost();
-
+  console.log(Stock.data.isDealerStock )
   if (Stock != null)
     return (
       <>
@@ -123,7 +123,7 @@ export default async function CarDetailed({ params }: Props) {
                               alt={InventoryLocation?.slug}
                             />
                             {Stock.data.stockCode}
-                            {Stock.data.IsDealerStock === false ? (
+                            {Stock.data.isDealerStock === false ? (
                               ""
                             ) : (
 

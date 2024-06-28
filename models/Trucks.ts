@@ -45,5 +45,6 @@ export interface Trucks {
   heightOfCar: number;
   widthOfCar: number;
   M3: number;
+  isDealerStock : boolean;
   isReserved: boolean;
 }

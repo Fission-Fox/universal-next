@@ -21,6 +21,7 @@ export interface Machinery {
   price: number;
   auctionGrade: string;
   description: string;
+  isDealerStock : boolean;
   imageUrl: string;
   isActive: boolean;
   isReserved: boolean;

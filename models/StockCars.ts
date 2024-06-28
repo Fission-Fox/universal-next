@@ -37,6 +37,7 @@ export interface StockCars {
   engineSize: number;
   year: number;
   noOfDoors: string;
+  isDealerStock : boolean;
   noOfSeats: number;
   lengthOfCar: number;
   widthOfCar: number;
