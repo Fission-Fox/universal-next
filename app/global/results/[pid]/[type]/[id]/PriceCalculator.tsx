@@ -442,7 +442,7 @@ export default function PriceCalculator({
                     Freight Charges{" "}
                   </span>
                   <dd className="mt-1 text-lg font-semibold leading-6 text-indigo-900">
-                    <PriceFormat carPrice={freightCharge} />
+                    {freightCharge === 0 ? 'Ask for Freight Price' : <PriceFormat carPrice={freightCharge} />}
                   </dd>
                 </div>
                 <div className="text-center basis-1/3">

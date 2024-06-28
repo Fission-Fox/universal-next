@@ -55,15 +55,15 @@ const parseResponse = async <T>(
   };
 };
 
-const parseUserResponse = async <Customer>(
-  response: Response
-): Promise<Customer> => {
-  if (!response.ok) {
-    throw new Error(`HTTP error! Status: ${response.status}`);
-  }
-  const data: Customer = await response.json();
-  return data;
-};
+// const parseUserResponse = async <Customer>(
+//   response: Response
+// ): Promise<Customer> => {
+//   if (!response.ok) {
+//     throw new Error(`HTTP error! Status: ${response.status}`);
+//   }
+//   const data: Customer = await response.json();
+//   return data;
+// };
 
 const requestNoCache = {
   get: async <T>(url: string) => {

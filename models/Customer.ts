@@ -35,7 +35,7 @@ export interface Customer {
   phone3: string;
   isAssigned: boolean;
   assignedAgentId: number;
-  isTrxAccActive: boolean;
+  //isTrxAccActive: boolean;
   isAdmin: boolean;
   isActive: boolean;
   createdOn: string;

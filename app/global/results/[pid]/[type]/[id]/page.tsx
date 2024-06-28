@@ -123,8 +123,18 @@ export default async function CarDetailed({ params }: Props) {
                               alt={InventoryLocation?.slug}
                             />
                             {Stock.data.stockCode}
+                            {Stock.data.IsDealerStock === false ? (
+                              ""
+                            ) : (
+
+                              <span className="flex items-center gap-x-1 bg-[white] px-2 py-1 font-medium text-[#221C63] border-[1px] border-[#221C63] rounded-xl my-2">
+                             Its a Dealer Stock
+                            </span>
+
+                            )}
                           </span>
                         </div>
+
                         {/* <Countdown date={Date.now() + 10000} /> */}
                         {Stock.data.isReserved ? (
                           <div className="stock w-full">

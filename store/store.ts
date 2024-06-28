@@ -36,7 +36,7 @@ export const initialUserData = {
   phone3: "",
   isAssigned: false,
   assignedAgentId: 0,
-  isTrxAccActive: false,
+  //isTrxAccActive: false,
   isActive: false,
   isAdmin: false,
   createdOn: "",
