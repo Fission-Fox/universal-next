@@ -370,11 +370,11 @@ export default function CarCard({ car, href, fav, countries, type }: Prop) {
               />
               {car.locationName}
             </div>
-            <Link className="!max-w-full" href={href}>
-              <button className="text-[12px]   px-4 mb-2 py-1 rounded-full text-[#221C63] font-semibold border-[1px] border-[#221C63] ml-4 ">
-                Send Offer
-              </button>
-            </Link>
+            {/*<Link className="!max-w-full" href={href}>*/}
+            {/*  <button className="text-[12px]   px-4 mb-2 py-1 rounded-full text-[#221C63] font-semibold border-[1px] border-[#221C63] ml-4 ">*/}
+            {/*    Send Offer*/}
+            {/*  </button>*/}
+            {/*</Link>*/}
           </div>
         </div>
       </div>

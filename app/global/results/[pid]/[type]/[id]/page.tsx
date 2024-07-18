@@ -63,7 +63,7 @@ export default async function CarDetailed({ params }: Props) {
   );
   const freightChargeMaster = await agent.LoadData.freightcost();
   const inspectionCost = await agent.LoadData.inspectioncost();
-  console.log(Stock.data.isDealerStock )
+
   if (Stock != null)
     return (
       <>
@@ -127,11 +127,12 @@ export default async function CarDetailed({ params }: Props) {
                               ""
                             ) : (
 
-                              <span className="flex items-center gap-x-1 bg-[white] px-2 py-1 font-medium text-[#221C63] border-[1px] border-[#221C63] rounded-xl my-2">
-                             Its a Dealer Stock
-                            </span>
+                              <span
+                                className="bg-pink-100 text-pink-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300  ">
+                              Its a Dealer Stock
+                              </span>
 
-                            )}
+                              )}
                           </span>
                         </div>
 

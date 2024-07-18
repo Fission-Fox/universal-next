@@ -84,7 +84,7 @@ export default function TabButtons({
     <>
       {!isSignedIn && (
         <button
-          className="bg-[#221C63] w-full h-[45px] text-white text-[15px] rounded-lg"
+          className="bg-[#221C63] w-full h-[45px] text-white text-[15px] rounded-lg mt-2"
           onClick={() => {
             router.push("/sign-up");
           }}
@@ -113,7 +113,7 @@ export default function TabButtons({
       </div>
 
       <div>
-        <div className="grid grid-cols-3 gap-2 mb-2 mt-4">
+        <div className="grid grid-cols-3 gap-2 mb-2 mt-2">
           {button.map((e, i) => {
             return (
               <button

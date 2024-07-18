@@ -387,8 +387,27 @@ export default function HomeDesktop({
               href="https://wa.link/5g81p6"
               style={{ color: "blue", fontSize: "12px" }}
             >
-              <i className="fa fa-whatsapp" style={{ color: "green" }} />
+              <i className="ml-1 fa fa-whatsapp" style={{ color: "green" }} />
             </a>
+            <a
+             href="https://instagram.com/universalmotorsltdofficial/"
+            >
+              {/*<i className="ml-2 fa fa-instagram" style={{ color: "violet" }} />*/}
+              <img className="inline pb-2.5 ml-2" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"/>
+            </a>
+            <a
+              style={{ color: "red", fontSize: "30px" }}
+              href="https://youtube.com/@universalmotorsltdofficial/"
+            >
+              <i className="ml-4 fa fa-youtube" style={{ color: "red" }} />
+            </a>
+            <a
+              style={{ color: "navy", fontSize: "30px" }}
+              href="https://linkedin.com/company/universal-motors-ltd/"
+            >
+              <i className="ml-4 fa fa-linkedin" style={{ color: "navy" }} />
+            </a>
+
           </div>
         </div>
       </div>
