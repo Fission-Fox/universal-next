@@ -192,7 +192,7 @@ function Header({ locations, ports, portMapping, stockCount }: Props) {
                               className="fa fa-phone mb-1"
                               style={{ fontSize: "12px" }}
                             >
-                              +81 50 5050 8550
+                              +81 50 5050 8991
                             </i>
 
                             <p className="m-0" style={{ fontSize: "12px" }}>
