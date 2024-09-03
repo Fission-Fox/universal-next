@@ -455,7 +455,7 @@ function Header({ locations, ports, portMapping, stockCount }: Props) {
                       Contact Us
                     </li>
                     <li>+49 471 9731 9003</li>
-                    <li className="last">+81 50 5050 8550</li>
+                    <li className="last">+81 50 5050 8991</li>
                     <li>info@universalmotorsltd.com</li>
 
                     <li className="highlighted">
